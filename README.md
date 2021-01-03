@@ -2,7 +2,7 @@
 
 Repositório criado para uma aplicação com o framework Django que realiza o CRUD (Create, Read, Update, Delete) de clientes. Na realização dos testes do projeto foi usado o VENV. Obs: faltando apenas a realização do teste da views da aplicação app. 
 
-<h2> 💻 Configuração necessária para rodar o projeto</h2>
+<h2> Configuração necessária para rodar o projeto</h2>
 
 1. Após clonar o repositório em seu computador, mova-se para dentro da pasta do projeto e realize a criação de ambiente virtual para rodar a aplicação:
 ```
