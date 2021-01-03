@@ -6,7 +6,7 @@ Repositório criado para uma aplicação com o framework Django que realiza o CR
 
 1. Após clonar o repositório em seu computador, mova-se para dentro da pasta do projeto e realize a criação de ambiente virtual para rodar a aplicação:
 ```
-virtualenv nome_da_virtualenv
+py -m venv nome_da_virtualenv
 ```
 
 2. Ative a máquina virtual
