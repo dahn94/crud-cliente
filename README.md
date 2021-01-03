@@ -17,27 +17,27 @@ python -m venv nome_da_virtualenv
 3. Instale as dependências do projeto:
 
 ```
-Pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 4. Realize as migrações para o banco de dados:
 ```
 python manage.py makemigrations
 
-Python manage.py migrate
+python manage.py migrate
 ```
 
-5. Crie um super usuário para ter acesso ao sistema 
+5. Crie um super usuário para poder ter acesso ao sistema 
 ```
 python manage.py createsuperuser
 ```
 
 6. Inicie o projeto:
 ```
-Python manage.py runserver
+python manage.py runserver
 ```
 
-7. Pronto, agora é só copiar o link do localhost gerado e colocar no navegador (use o usuário e a senha cadastrados previamente para ter acesso a aplicação):
+7. Pronto, agora é só copiar o link gerado e colocar no navegador (utilize o usuário e a senha cadastrados previamente para ter acesso ao sistema):
 ```
 localhost:8000
 ```
