@@ -11,8 +11,8 @@ python -m venv nome_da_virtualenv
 
 2. Ative a máquina virtual
 ```
-.\nome_da_virtualenv\Scripts\activate (No Windows) 
-$ source nome_da_virtualenv/bin/activate (bash/zsh)
+.\nome_da_virtualenv\Scripts\activate (CMD/PowerShell) 
+source /nome_da_virtualenv/bin/activate (bash/zsh)
 ```
 
 3. Instale as dependências do projeto:
