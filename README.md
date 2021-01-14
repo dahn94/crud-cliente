@@ -11,7 +11,8 @@ python -m venv nome_da_virtualenv
 
 2. Ative a máquina virtual
 ```
-.\nome_da_virtualenv\Scripts\activate
+.\nome_da_virtualenv\Scripts\activate (No Windows) 
+$ source nome_da_virtualenv/bin/activate (bash/zsh)
 ```
 
 3. Instale as dependências do projeto:
@@ -22,8 +23,6 @@ pip install -r requirements.txt
 
 4. Realize as migrações para o banco de dados:
 ```
-python manage.py makemigrations
-
 python manage.py migrate
 ```
 
