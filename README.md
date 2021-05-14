@@ -1,6 +1,6 @@
-# esterni-pjecalc-crawler
+# crud-cliente
 
-Repositório criado para uma aplicação com o Selenium que realiza a automação do pjecalc numa máquina windows. 
+Repositório criado para uma aplicação com o framework Django que realiza o CRUD (Create, Read, Update, Delete) de clientes. Na realização dos testes do projeto foi usado o VENV. Obs: faltando apenas a realização do teste da views da aplicação app. 
 
 <h2> Configuração necessária para rodar o projeto</h2>
 
@@ -12,23 +12,32 @@ python3 -m venv nome_da_virtualenv
 2. Ative a máquina virtual
 ```
 .\nome_da_virtualenv\Scripts\activate (CMD/PowerShell) 
+source /nome_da_virtualenv/bin/activate (bash/zsh)
 ```
 
 3. Instale as dependências do projeto:
 
 ```
-pip install selenium
+pip install -r requirements.txt
 ```
 
-4. Baixe o Geckodriver para Windows e descompacte no diretório C:\GeckoDriver (Usar PowerShell no modo Administrador)
-
+4. Realize as migrações para o banco de dados:
 ```
-Invoke-WebRequest https://github.com/mozilla/geckodriver/releases/download/v0.29.1/geckodriver-v0.29.1-win64.zip -OutFile C:\GeckoDriver\geckodriver-v0.29.1-win64.zip
-
-Expand-Archive C:\GeckoDriver\geckodriver-v0.29.1-win64.zip -DestinationPath C:\GeckoDriver\
+python manage.py migrate
 ```
 
-5. Execute o programa
+5. Crie um super usuário para poder ter acesso ao sistema 
 ```
-python3 main.py
+python manage.py createsuperuser
 ```
+
+6. Inicie o projeto:
+```
+python manage.py runserver
+```
+
+7. Pronto, agora é só copiar o link gerado e colocar no navegador (utilize o usuário e a senha cadastrados previamente para ter acesso ao sistema):
+```
+localhost:8000
+```
+
