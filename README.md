@@ -1,6 +1,6 @@
-# crud-cliente
+# esterni-pjecalc-crawler
 
-Repositório criado para uma aplicação com o framework Django que realiza o CRUD (Create, Read, Update, Delete) de clientes. Na realização dos testes do projeto foi usado o VENV. Obs: faltando apenas a realização do teste da views da aplicação app. 
+Repositório criado para uma aplicação com o Selenium que realiza a automação do pjecalc numa máquina windows. 
 
 <h2> Configuração necessária para rodar o projeto</h2>
 
@@ -12,33 +12,56 @@ python3 -m venv nome_da_virtualenv
 2. Ative a máquina virtual
 ```
 .\nome_da_virtualenv\Scripts\activate (CMD/PowerShell) 
-source /nome_da_virtualenv/bin/activate (bash/zsh)
 ```
 
 3. Instale as dependências do projeto:
 
 ```
-pip install -r requirements.txt
+pip install selenium
 ```
 
-4. Realize as migrações para o banco de dados:
+4. Baixe o Geckodriver para Windows e descompacte no diretório C:\GeckoDriver (Usar PowerShell no modo Administrador)
+
 ```
-python manage.py migrate
+Invoke-WebRequest https://github.com/mozilla/geckodriver/releases/download/v0.29.1/geckodriver-v0.29.1-win64.zip -OutFile C:\GeckoDriver\geckodriver-v0.29.1-win64.zip
+
+Expand-Archive C:\GeckoDriver\geckodriver-v0.29.1-win64.zip -DestinationPath C:\GeckoDriver\
 ```
 
-5. Crie um super usuário para poder ter acesso ao sistema 
+5. Execute o programa
 ```
-python manage.py createsuperuser
+python3 main.py
+```# esterni-pjecalc-crawler
+
+Repositório criado para uma aplicação com o Selenium que realiza a automação do pjecalc numa máquina windows. 
+
+<h2> Configuração necessária para rodar o projeto</h2>
+
+1. Após clonar o repositório em seu computador, mova-se para dentro da pasta do projeto e realize a criação de ambiente virtual para rodar a aplicação:
+```
+python3 -m venv nome_da_virtualenv
 ```
 
-6. Inicie o projeto:
+2. Ative a máquina virtual
 ```
-python manage.py runserver
-```
-
-7. Pronto, agora é só copiar o link gerado e colocar no navegador (utilize o usuário e a senha cadastrados previamente para ter acesso ao sistema):
-```
-localhost:8000
+.\nome_da_virtualenv\Scripts\activate (CMD/PowerShell) 
 ```
 
+3. Instale as dependências do projeto:
 
+```
+pip install selenium
+```
+
+4. Baixe o Geckodriver para Windows e descompacte no diretório C:\GeckoDriver (Usar PowerShell no modo Administrador)
+
+```
+Invoke-WebRequest https://github.com/mozilla/geckodriver/releases/download/v0.29.1/geckodriver-v0.29.1-win64.zip -OutFile C:\GeckoDriver\geckodriver-v0.29.1-win64.zip
+
+Expand-Archive C:\GeckoDriver\geckodriver-v0.29.1-win64.zip -DestinationPath C:\GeckoDriver\
+```
+
+5. Execute o programa
+```
+python3 main.py
+```
